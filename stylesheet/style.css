@@ -68,6 +68,10 @@ nav{
     display: none;
 }
 
+.navbar-list .not-visible{
+    visibility: hidden;
+    display: none;
+}
 .navbar-list .menu-bar{
     width: 48px;
     height: 100%;
@@ -95,11 +99,6 @@ nav{
     vertical-align: middle;
 }
 
-.not-visible{
-    display: none;
-    /* visibility: unset; */
-}
-
 #hero-section{
     height: 90vh;
     /* background-color: red; */
@@ -125,8 +124,8 @@ nav{
         /* display: none; */
         visibility: visible;
     }
-    /* .not-visible{
-        display: block;
+    .navbar-list .not-visible{
         visibility: hidden;
-    } */
+        display: block;
+    }
 }
