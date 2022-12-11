@@ -11,6 +11,15 @@ body{
     min-height: 100vh;                                                
 }
 
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
 nav{
     position: fixed;
     top: 0;
@@ -23,4 +32,72 @@ nav{
 .navbar-container{
     width: 100%;
     height: 100%;
+}
+
+.navbar-list{
+    width: 80%;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.navbar-list li{
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+.navbar-list .hide{
+    display: none;
+}
+
+.navbar-list li a{
+    color: #f5f5f7;
+    font-size: 12px;
+    letter-spacing: 0px;
+    transition: opacity .3s;
+}
+
+.navbar-list li .search-icon{
+    font-size: 16px;
+}
+
+.navbar-list li a:hover{
+    opacity: .8;
+}
+
+@media screen and (max-width: 1300px){
+    .navbar-list{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .navbar-list .hide{
+        display: block;
+    }
+
+    .navbar-list .hide .menu-hamburger{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: .7rem;
+        width: 39px;
+        height: 100%;
+    }
+
+    .navbar-list .hide .menu-hamburger span{
+        border-top: 1px solid white;
+    }
+
+    .navbar-list .show{
+        display: none;
+    }
+
+    .navbar-list .visible{
+        visibility: hidden;
+    }
 }
