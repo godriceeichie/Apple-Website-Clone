@@ -72,13 +72,13 @@ nav{
 #hero-section{
     height: 95vh;
     max-width: 100vw;
-    /* margin-top: 50px; */
+    border-bottom: 2px solid white;
 }
 
 .hero-container{
     width: 100%;
     height: 100%;
-    background-image: url(/img/hero-banner-small.jpg);
+    background-image: url(/img/hero-img/hero-banner-small.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -116,7 +116,55 @@ nav{
     line-height: 23.0001px;
     letter-spacing: 0.228px;
     font-weight: 400;
-    color: rgb(0, 102, 204)
+    color: #2997FF;
+}
+
+#iPhone-section{
+    background-color: black;
+    height: 70vh;
+    max-width: 100vw;
+}
+
+.iPhone-container{
+    height: 100%;
+    background-image: url(/img/iPhonePro-img/iPhone14-Pro-largest.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.iPhone-container .iPhone-info{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.iPhone-container .iPhone-info h1{
+    font-size: 48px;
+    line-height: 1.08349;
+    font-weight: 600;
+    letter-spacing: -.002em;
+}
+
+.iPhone-container .iPhone-info h4{
+    font-size: 24px;
+    line-height: 1.16667;
+    letter-spacing: .009em;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.iPhone-container .iPhone-info a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 19px;
+    line-height: 23.0001px;
+    letter-spacing: 0.228px;
+    font-weight: 400;
+    color: #2997FF;
 }
 
 @media screen and (max-width: 1300px){
@@ -131,7 +179,7 @@ nav{
     .hero-container{
         width: 100%;
         height: 100%;
-        background-image: url(/img/hero-banner.jpg);
+        background-image: url(/img/hero-img/hero-banner.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -151,6 +199,27 @@ nav{
     #hero-section{
         height: 80vh;
     }
+
+    .hero-container .ipad-info{
+        margin-left:560px;
+        text-align: center;
+    }
+
+    #iPhone-section{
+        background-color: black;
+        height: 60vh;
+        max-width: 100vw;
+    }
+
+    .iPhone-container{
+        background-image: url(/img/iPhonePro-img/iPhone14-Pro-large.jpg);
+    }
+
+    .iPhone-container .iPhone-info{
+        text-align: center;
+        margin-top: 50px;
+    }
+    
 }
 
 /* for tablet view */
@@ -180,6 +249,22 @@ nav{
         visibility: hidden;
     }
 
+    #hero-section{
+        height: 60vh;
+    }
+
+    .hero-container{
+        width: 100%;
+        height: 100%;
+        background-image: url(/img/hero-img/hero-banner.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding-top: 50px;
+        display: flex;
+        align-items: center;
+    }
+
     .hero-container .ipad-info{
         margin-left: 480px;
         text-align: center;
@@ -189,12 +274,12 @@ nav{
 /* For mobile view */
 @media screen and (max-width: 600px) {
     #hero-section{
-        height: 75vh;
+        height: 60vh;
     }
     .hero-container{
         width: 100%;
         height: 100%;
-        background-image: url(/img/phone-hero-banner.jpg);
+        background-image: url(/img/hero-img/phone-hero-banner.jpg);
         background-repeat: no-reeat;
         background-size: cover;
         background-position: center;
@@ -203,7 +288,7 @@ nav{
     }
     .hero-container .ipad-info{
         margin-left: 0px;
-        margin-top: 50px;
+        margin-top: 40px;
         flex-direction: column;
         align-items: center;
     }
@@ -221,6 +306,37 @@ nav{
         letter-spacing: 0em;
         font-weight: 400;
         margin-top: 5px;
+    }
+
+    #iPhone-section{
+        background-color: black;
+        height: 40vh;
+        max-width: 100vw;
+    }
+
+    .iPhone-container{
+        background-image: url(/img/iPhonePro-img/iPhone14-small.jpg);
+    }
+
+    .iPhone-container .iPhone-info h1{
+        font-size: 32px;
+        line-height: 1.125;
+        font-weight: 600;
+        letter-spacing: .004em;
+    }
+
+    .iPhone-container .iPhone-info h4{
+        font-size: 19px;
+        line-height: 1.21053;
+        letter-spacing: 0em;
+    }
+
+    .iPhone-container .iPhone-info a{
+        font-size: 17px;
+        line-height: 1.23536;
+        letter-spacing: unset;
+        font-weight: 400;
+        color: #2997FF;
     }
     
 }
