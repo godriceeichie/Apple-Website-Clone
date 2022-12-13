@@ -71,10 +71,10 @@ nav{
 }
 
 #hero-section{
-    height: 90vh;
+    height: 87vh;
     width: 100%;
     margin-top: 50px;
-    border-bottom: 10px solid white;
+    margin-bottom: 15px;
     position: relative;
 }
 
@@ -129,7 +129,7 @@ nav{
     height: 90vh;
     position: relative;
     background-color: black;
-    border-bottom: 10px solid white;
+    margin-bottom: 15px;
 }
 
 .iPhone14Pro-link{
@@ -183,7 +183,7 @@ nav{
     height: 90vh;
     background-color: rgb(251,251,253);
     position: relative;
-    border-bottom: 10px solid white;
+    margin-bottom: 15px;
 }
 
 .iPhone14-link{
@@ -242,12 +242,150 @@ nav{
     text-decoration: none;
 }
 
-/* Small laptops */
+#products-grid{
+    margin-top: 15px;
+    width: 100%;
+    height: 180vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding-inline: 15px;
+    margin-bottom: 15px;    
+}
+
+.products-grid-item{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.products-link{
+    display: block;
+    height: 100%;
+}
+
+.iPad-Pro-link{
+    background-image: url(/img/product-grid-img/iPad-Pro-large-img.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.Macbook-Air-link{
+    background-image: url(/img/product-grid-img/Macbook-Air-large-img.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.Macbook-Pro-13-link{
+    background-image: url(/img/product-grid-img/Macbook-Pro-large-img.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.iPad-Air-link{
+    background-image: url(/img/product-grid-img/iPad-Air-large-img.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.products-details{
+    width: 50%;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    right: 25%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f5f5f7;
+}
+
+.Macbook-Air-details{
+    color: black;
+}
+
+.products-details h1{
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0em;
+    white-space: nowrap;
+}
+
+.Macbook-Air-details h4{
+    width: 100%;
+    height: 30px;
+    background-image: url(/img/product-grid-img/Macbook-Air-processor-img.png);
+    background-repeat: no-repeat;
+    /* background-size: 112px 30px; */
+    background-position: 50% 50%;
+}
+
+.iPad-Air-details h1{
+    width: 100%;
+    height: 30px;
+    background-image: url(/img/product-grid-img/iPad-Air-logo.png);
+    background-repeat: no-repeat;
+    background-size: 112px 30px;
+    background-position: 50% 50%;
+    display: unset;
+}
+
+.products-details h4{
+    font-size: 21px;
+    line-height: 1.2381;
+    font-weight: 400;
+    letter-spacing: .016em;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.products-details h4 span{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-image: url(/img/product-grid-img/apple-processor-img.png);
+}
+
+.products-details a{
+    font-size: 17px;
+    line-height: 1.23536;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    display: flex;
+    align-items: center;
+    color: rgb(41, 151, 255)
+}
+
+.products-details a:hover{
+    text-decoration: underline;
+}
+
+.products-details a:hover>span{
+    text-decoration: none;
+}
+
 @media screen and (max-width: 1100px){
+    #hero-section{
+        height: 85vh;
+    }
+
+    #products-grid{
+        height: 150vh;
+    }
+}
+/* Small laptops */
+@media screen and (max-width: 1024px){
     #hero-section{
         height: 60vh;
     }
-
     .iPad-link{
         display: block;
         height: inherit;
@@ -295,11 +433,29 @@ nav{
         top: 15%;
         left: 40%;
     }
+
+    #products-grid{
+        height: 90vh;
+    }
+
+    .products-details h1{
+        font-size: 32px;
+        line-height: 1.125;
+        letter-spacing: .002em;
+    }
+    
+    .Macbook-Air-details h4{
+        width: 100%;
+        height: 30px;
+        background-image: url(/img/product-grid-img/Macbook-Air-processor-img.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
     
 }
 
 /* Tablet view */
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 940px) {
     .navbar-list .hide{
         display: block;
         height: 100%;
@@ -347,9 +503,10 @@ nav{
         top: 15%;
         left: 35%;
     }
-
 }
 
+
+/* Phone view */
 @media screen and (max-width: 600px){
     #hero-section{
         height: 50vh;
@@ -420,13 +577,25 @@ nav{
         letter-spacing: -.022em;
     }
 
+    #iPhone14-section{
+        height: 50vh;
+    }
+
     .iPhone14-info{
+        top: 10%;
         left: 30%;
     }
 
+    #products-grid{
+        height: 200vh;
+        grid-template-columns: repeat(1, 1fr);
+        padding-inline: 0px;
+
+        /* grid-auto-rows: 40vh; */
+    }
 }
 
-@media screen and (max-width: 385px){
+@media screen and (max-width: 385px) and (min-height: 668px){
     #hero-section{
         height: 50vh;
     }
@@ -441,12 +610,12 @@ nav{
     }
 
     #iPhone14Pro-section{
-        height: 70vh;
+        height: 50vh;
     }
 
     #iPhone14-section{
         width: 100%;
-        height: 70vh;
+        height: 50vh;
         background-color: rgb(251,251,253);
         position: relative;
         border-bottom: 10px solid white;
@@ -460,6 +629,29 @@ nav{
         top: 10%;
         left: 30%
     }
+}
+
+@media screen and (max-width: 385px) and (max-height: 667px){
+    #iPhone14Pro-section{
+        height: 70vh;
+    }
+
+    #iPhone14-section{
+        width: 100%;
+        height: 70vh;
+        background-color: rgb(251,251,253);
+        position: relative;
+        border-bottom: 10px solid white;
+    }
+
+    #products-grid{
+        height: 280vh;
+        grid-template-columns: repeat(1, 1fr);
+        padding-inline: 0px;
+
+        /* grid-auto-rows: 40vh; */
+    }
+    
 }
 
 @media screen and (max-width: 325px) {
